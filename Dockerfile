@@ -21,7 +21,7 @@ FROM nginx:alpine
 
 # Copy the built application from the build stage to the appropriate directory
 RUN rm -rf /usr/share/nginx/html/*
-COPY --from=build /app/dist /usr/share/nginx/html
+COPY --from=build /app/dist/coolify-test/browser /usr/share/nginx/html
 COPY --from=build /app/nginx.conf /etc/nginx/conf.d/default.conf
 
 # Start Nginx server
