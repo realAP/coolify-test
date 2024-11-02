@@ -1,0 +1,8 @@
+services:
+  fe:
+    build:
+      dockerfile: Dockerfile
+    pull_policy: build
+    restart: always
+    ports:
+      - "8000:80"
