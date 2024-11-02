@@ -5,8 +5,8 @@ services:
     pull_policy: build
     restart: always
     environment:
-      COOLIFY_URL: 'https://something.asdss.de:8080'
-      COOLIFY_FQDN: 'https://something.asdss.de:8080'
+     - SERVICE_FQDN_FE=/
+     - SERVICE_FQDN_FE_8080
     healthcheck:
       test: [ "CMD-SHELL", "wget -qO- http://127.0.0.1:80/" ]
       interval: 5s
