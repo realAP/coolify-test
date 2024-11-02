@@ -5,7 +5,7 @@ services:
     pull_policy: build
     restart: always
     environment:
-      - SERVICE_FQDN_FE_80
+      - SERVICE_FQDN_FE_3000
     healthcheck:
       test: [ "CMD-SHELL", "wget -qO- http://127.0.0.1:80/" ]
       interval: 5s
